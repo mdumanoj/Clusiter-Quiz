@@ -1,0 +1,65 @@
+<html>
+	<head>
+	<title>Result</title>
+	<style type="text/css">
+		body{
+				background-color:#111;
+				color:lightgreen;
+				font-family: Calibri;
+				margin:0px auto;
+		}
+		header{
+				margin:0px auto;
+				width:1000px;
+				text-align:center;
+				font-family:"Cambria";
+		}
+		#result {
+			margin-top:5%;
+			padding-top:3%;
+			margin-left:27%;
+			padding-left:3%;
+			margin-right:35%;
+			padding-bottom:3%;
+			background-color:rgba(0, 0, 0, 0.25);
+			font-size:30;
+			line-height:2;
+			font-family:"Cambria";
+			border:2px solid #fff;
+			border-radius:30px;
+		
+		}
+		footer {
+			position:absolute;
+			bottom:0;
+			text-align:center;
+			padding-top:1%;
+			font-size:20;
+			width:100%;
+			height:100px; 
+			background:rgba(0, 0, 0, 0.25);
+			border-top:1px solid #fff;
+		}
+	</style>
+	<script type="text/javascript">
+		function display() {
+			document.getElementById('result').innerHTML = "Your Score is <br><font color='orange'>"+localStorage.score+"</font>";
+			
+			localStorage.score = +0;
+		}
+	</script>
+	</head>
+	<body onload="display();">
+		<header>
+				<h1>Test Your Skills in C and C++.</h1>
+				<hr></hr>
+		</header>
+		<div id="result">
+
+		</div>
+		<footer>
+			Developed For<br>
+			&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Clusiter`14<br>
+		</footer>
+	</body>
+</html>

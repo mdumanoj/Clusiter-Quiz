@@ -1,0 +1,528 @@
+<html>
+	<title>Questions</title>
+	<head>
+		<style type="text/css">
+		body{
+				margin: 1%;
+				background-color:#111;
+				color:lightgreen;
+				user-select: none;
+				font-family: Calibri;
+				-webkit-user-select: none;
+				-moz-user-select: none;
+		}
+		header{
+				margin:0px auto;
+				width:1000px;
+				text-align:center;
+				font-family:"Cambria";
+		}
+		h3{
+			font-size:30;
+			font-weight:100;
+			text-transform:capitalize;
+		}
+		pre {
+			font-weight:100;
+			font-size:20;
+			margin-left:-30%;
+		}
+		section {
+			font-size:23;
+			margin-left:5%;
+		}
+		input{
+			margin-left:10%;
+		}
+		#save{
+			margin-top:5%;
+			margin-left:30%;
+			height:50;
+			width:200;
+			font-size:20;
+			border:1px solid #111;
+			border-radius:10px;
+			background:lightgreen;
+			color:#111;
+			transition: 0.5s background linear;
+			-webkit-transition: 0.5s background linear;
+			-moz-transition: 0.5s background linear;
+		}
+		#save:hover{
+			background: green;
+			cursor: pointer;
+		}
+		#timer {
+			position:fixed;
+			margin-left:80%;
+			margin-top:1%;
+			font-family:"comic sans ms";
+			font-size:20;
+			padding-left:1%;
+			margin-right:13%;
+			padding-right:1%;
+			padding-top:1%;
+			padding-bottom:1%;
+			background-color:rgba(0, 0, 0, 0.25);
+			border:2px solid #fff;
+			border-radius:20px;
+		}
+		</style>
+		
+		<script src="timer.js"></script>
+		<script src="valid.js"></script>
+	</head>
+	<body oncontextmenu="return false;" onload="CreateTimer(15,0);">
+		<header>
+				<h1>Clusiter`14 Semicolon;</h1>
+				<hr></hr>
+		</header>
+		<div id="timer">
+		</div>
+		<section>
+			<form action="result.html" method="post" id="quesform">
+				<div id="q1">
+					<h3>1) Which of the following cannot be checked in a switch-case statement?</h3>
+					<input type="radio" name="ans1" id="1a" /> Character   </br>
+					<input type="radio" name="ans1" id="1b"/> enum  </br>
+					<input type="radio" name="ans1" id="1c" /> Float   </br>
+					<input type="radio" name="ans1" id="1d"/> Integer  </br>
+				</div>
+				
+				<div id="q2">
+					<h3>2) predict the error or output of the code.</h3>
+						<pre>
+							main()
+							{
+								static int var = 5;
+								printf("%d ",var--);
+								if(var)
+								main();
+							}
+						</pre>
+					<input type="radio" name="ans2" id="2a" />  55555 </br>
+					<input type="radio" name="ans2" id="2b"/> 54321   </br>
+					<input type="radio" name="ans2" id="2c"/> Compiler Error   </br>
+					<input type="radio" name="ans2" id="2d"/> Stack Overflow  </br>
+				</div>
+				
+				<div id="q3">
+					<h3>3) What is the output of the code ?</h3>
+						<pre>
+							main()
+							{
+								int i=-1,j=-1,k=0,l=2,m;
+								m=i++&&j++&&k++||l++;
+								printf("%d %d %d %d %d",i,j,k,l,m);
+							}
+						</pre>
+					<input type="radio" name="ans3" id="3a" /> 0 0 1 3 1 </br>
+					<input type="radio" name="ans3" id="3b"/> -1 -1 0 2 1    </br>
+					<input type="radio" name="ans3" id="3c"/>  0 0 1 3 0  </br>
+					<input type="radio" name="ans3" id="3d"/> 0 0 1 2 1 </br>
+				</div>
+				
+				<div id="q4">
+					<h3>4) Predict the output of the code.</h3>
+						<pre>
+							main()
+							{
+								char *p;
+								printf("%d %d ",sizeof(*p),sizeof(p));
+							}
+						</pre>
+					<input type="radio" name="ans4" id="4a" /> 2 1  </br>
+					<input type="radio" name="ans4" id="4b" /> 1 1  </br>
+					<input type="radio" name="ans4" id="4c" /> 2 2  </br>
+					<input type="radio" name="ans4" id="4d" /> 1 2  </br>
+				</div>
+				
+				<div id="q5">
+					<h3>5) Predict the Error or output of the code.</h3>
+						<pre>
+							main()
+							{
+								char string[]="Hello World";
+								display(string);
+							}
+							void display(char *string)
+							{
+								printf("%s",string);
+							}
+						</pre>
+					<input type="radio" name="ans5" id="5a" /> Hello World  </br>
+					<input type="radio" name="ans5" id="5b" /> Garbage Value   </br>
+					<input type="radio" name="ans5" id="5c" /> Compiler Error   </br>
+					<input type="radio" name="ans5" id="5d" /> No output,No Error  </br>
+				</div>
+				<div id="q6">
+					<h3>6) Find the output of the code.</h3>
+					<pre>
+							#define int char
+							main()
+							{
+								int i=65;
+								printf("sizeof(i)=%d",sizeof(i));
+							}
+					</pre>
+					<input type="radio" name="ans6" id="6a"  /> sizeof(i)=2   </br>
+					<input type="radio" name="ans6" id="6b" /> sizeof(i)=1  </br>
+					<input type="radio" name="ans6" id="6c" /> 2  </br>
+					<input type="radio" name="ans6" id="6d" /> 65  </br>
+				</div>
+				
+				<div id="q7">
+					<h3>7) Predict the Error of Output of the code.</h3>
+						<pre>
+							main()
+							{
+								struct xx
+								{
+									int x=3;
+									char name[]="hello";
+								};
+								struct xx *s;
+								printf("%d",s->x);
+								printf("%s",s->name);
+							}
+						</pre>
+					<input type="radio" name="ans7" id="7a" /> Compiler Error   </br>
+					<input type="radio" name="ans7" id="7b" /> 3hello  </br>
+					<input type="radio" name="ans7" id="7c" /> Garbage Value   </br>
+					<input type="radio" name="ans7" id="7d" />  xx.3xx.hello  </br>
+				</div>
+				
+				<div id="q8">
+					<h3>8) Find the output of the code.</h3>
+						<pre>
+							main()
+							{
+								int i=5;
+								printf("%d%d%d%d%d",i++,i--,++i,--i,i);
+							}
+						</pre>
+					<input type="radio" name="ans8" id="8a" /> 65655  </br>
+					<input type="radio" name="ans8" id="8b" /> 54545  </br>
+					<input type="radio" name="ans8" id="8c" /> 56655  </br>
+					<input type="radio" name="ans8" id="8d" /> 45545  </br>
+				</div>
+				
+				<div id="q9">
+					<h3>9) Predict the Error or Output of the code.</h3>
+					<pre>
+						#define square(x) x*x
+						main()
+						{
+							int i;
+							i = 64/square(4);
+							printf("%d",i);
+						}
+					</pre>
+					<input type="radio" name="ans9" id="9a" /> 4  </br>
+					<input type="radio" name="ans9" id="9b" /> Compiler Error  </br>
+					<input type="radio" name="ans9" id="9c" /> 64  </br>
+					<input type="radio" name="ans9" id="9d" /> 16  </br>
+				</div>
+				
+				<div id="q10">
+					<h3>10) Predict the Error or Output of the code.</h3>
+					<pre>
+						int a=10;
+						main()
+						{
+							int a=50
+							printf("%d",a);
+						}
+					</pre>
+					<input type="radio" name="ans10" id="10a" /> Compiler Error  </br>
+					<input type="radio" name="ans10" id="10b" /> 50  </br>
+					<input type="radio" name="ans10" id="10c" /> 10  </br>
+					<input type="radio" name="ans10" id="10d" /> 60  </br>
+				</div>				
+				
+				<div id="q11">
+					<h3>11) Find the output of the code.</h3>
+					<pre>
+						enum colors {BLACK,BLUE,GREEN}
+						main()
+						{
+							printf("%c..%c..%c",BLACK,BLUE,GREEN);
+							return(1);
+						}
+					</pre>
+					<input type="radio" name="ans11" id="11a" /> ....  </br>
+					<input type="radio" name="ans11" id="11b" /> B..B..G  </br>
+					<input type="radio" name="ans11" id="11c" /> BLACK..BLUE..GREEN  </br>
+					<input type="radio" name="ans11" id="11d" /> 1..2..3  </br>
+				</div>
+				
+				<div id="q12">
+					<h3>12) Predict the Error or Output of the code.</h3>
+					<pre>
+						void main()
+						{
+							int i=5;
+							printf("%d",i+++++i);
+						}
+					</pre>
+					<input type="radio" name="ans12" id="12a" /> Garbage Value  </br>
+					<input type="radio" name="ans12" id="12b" /> 11  </br>
+					<input type="radio" name="ans12" id="12c" /> 12  </br>
+					<input type="radio" name="ans12" id="12d" /> Compiler Error  </br>
+				</div>
+				
+				<div id="q13">
+					<h3>13) Predict the Error or Output of the code. </h3>
+					<pre>
+						main()
+						{
+							int i=1,j=2;
+							switch(i)
+							{
+								case 1: printf("GOOD");
+								break;
+								case j: printf("BAD");
+								break;
+							}
+						}
+					</pre>
+					<input type="radio" name="ans13" id="13a" /> BAD   </br>
+					<input type="radio" name="ans13" id="13b" /> GOOD  </br>
+					<input type="radio" name="ans13" id="13c" /> Compiler Error  </br>
+					<input type="radio" name="ans13" id="13d" /> GOODBAD  </br>
+				</div>
+				
+				<div id="q14">
+					<h3>14) Find the output of the code.</h3>
+					<pre>
+						main()
+						{
+							int i=0;
+							for(;i<5;i++);
+								printf("%d",i);
+						}
+					</pre>
+					<input type="radio" name="ans14" id="14a" /> Infinite Loop </br>
+					<input type="radio" name="ans14" id="14b" /> 5  </br>
+					<input type="radio" name="ans14" id="14c" /> No Output, No Error  </br>
+					<input type="radio" name="ans14" id="14d" /> 0  </br>
+				</div>
+				
+				<div id="q15">
+					<h3>15) Predict the Error or Output of the code.</h3>
+					<pre>
+						main()
+						{
+							int a=1^6;
+							printf("%d",a);
+							return 0;
+						}
+					</pre>	
+					<input type="radio" name="ans15" id="15a" /> 7  </br>
+					<input type="radio" name="ans15" id="15b" /> Compiler Error  </br>
+					<input type="radio" name="ans15" id="15c" /> 1  </br>
+					<input type="radio" name="ans15" id="15d" />  6 </br>
+				</div>
+				<div id="q16">
+					<h3>16) What will happen if a class is not having any name?</h3>
+					<input type="radio" name="ans16" id="16a" /> It cannot have a destructor.  </br>
+					<input type="radio" name="ans16" id="16b" /> It cannot have a constructor.  </br>
+					<input type="radio" name="ans16" id="16c" />  It is not allowed. </br>
+					<input type="radio" name="ans16" id="16d" /> Both A and B.  </br>
+				</div>
+				
+				<div id="q17">
+					<h3>17) cout is a/an __________ .</h3>
+					<input type="radio" name="ans17" id="17a" /> Operator   </br>
+					<input type="radio" name="ans17" id="17b" /> Function  </br>
+					<input type="radio" name="ans17" id="17c" /> Object  </br>
+					<input type="radio" name="ans17" id="17d" /> Macro  </br>
+				</div>
+				
+				<div id="q18">
+					<h3>18) Predict the Error or Output of the code.</h3>
+					<pre>
+						int main()
+						{
+							int a = 5, b = 10, c = 15;
+							int arr[3] = {&a, &b, &c};
+							cout << *arr[*arr[1] - 8];
+							return 0;
+						}
+					</pre>
+					<input type="radio" name="ans18" id="18a" /> 15  </br>
+					<input type="radio" name="ans18" id="18b" /> 18  </br>
+					<input type="radio" name="ans18" id="18c" /> Garbage Value  </br>
+					<input type="radio" name="ans18" id="18d" /> Compiler Error  </br>
+				</div>
+				
+				<div id="q19">
+					<h3>19) Find the output of the code.</h3>
+					<pre>
+						int main()
+						{
+							char str[5] = "ABC";
+							cout << str[3];
+							cout << str;
+							return 0;
+						}
+					</pre>
+					<input type="radio" name="ans19" id="19a" /> ABC   </br>
+					<input type="radio" name="ans19" id="19b" /> ABCD  </br>
+					<input type="radio" name="ans19" id="19c" /> AB  </br>
+					<input type="radio" name="ans19" id="19d" /> None Of the Mentioned  </br>
+				</div>
+				
+				<div id="q20">
+					<h3>20) Predict the Error or Ouput of the code.</h3>
+					<pre>
+						int main()
+						{
+							int array[] = {10, 20, 30};
+							cout << -2[array];
+							return 0;
+						}
+					</pre>
+					<input type="radio" name="ans20" id="20a" /> -15  </br>
+					<input type="radio" name="ans20" id="20b" /> -30  </br>
+					<input type="radio" name="ans20" id="20c" /> Compiler Error  </br>
+					<input type="radio" name="ans20" id="20d" /> Garbage Value  </br>
+				</div>				
+				
+				<div id="q21">
+					<h3>21) Find the output of the code.</h3>
+					<pre>
+						int main()
+						{
+							int a = 21;
+							int c;
+							c = a++;
+							cout << c;  
+							return 0;
+						}
+					</pre>
+					<input type="radio" name="ans21" id="21a" /> 21  </br>
+					<input type="radio" name="ans21" id="21b" /> 22  </br>
+					<input type="radio" name="ans21" id="21c" /> 23  </br>
+					<input type="radio" name="ans21" id="21d" /> 20  </br>
+				</div>
+				
+				<div id="q22">
+					<h3>22) The static member variable is initialized to ?</h3>
+					<input type="radio" name="ans22" id="22a" /> 0  </br>
+					<input type="radio" name="ans22" id="22b" /> 1  </br>
+					<input type="radio" name="ans22" id="22c" /> 2  </br>
+					<input type="radio" name="ans22" id="22d" /> -1  </br>
+				</div>
+				
+				<div id="q23">
+					<h3>23) What features make C++ so powerful ?</h3>
+					<input type="radio" name="ans23" id="23a" /> Easy implementation  </br>
+					<input type="radio" name="ans23" id="23b" /> Code reusability  </br>
+					<input type="radio" name="ans23" id="23c" />  Easy memory management </br>
+					<input type="radio" name="ans23" id="23d" /> All the above  </br>
+				</div>
+				
+				<div id="q24">
+					<h3>24) "My salary was increased by 15%!" <br>
+							Select the statement which will EXACTLY reproduce the line of text above.</h3>
+					<input type="radio" name="ans24" id="24a" /> printf("My salary was increased by 15%!\n");   </br>
+					<input type="radio" name="ans24" id="24b" /> printf("My salary was increased by 15'%'!\n");   </br>
+					<input type="radio" name="ans24" id="24c" /> printf("\"My salary was increased by 15%%!\"\n");  </br>
+					<input type="radio" name="ans24" id="24d" /> printf("\"My salary was increased by 15'%'!\"\n");  </br>
+				</div>
+				
+				<div id="q25">
+					<h3>25) int testarray[3][2][2] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12};<br> 
+							What value does testarray[2][1][0] in the sample code above contain ? </h3>
+					<input type="radio" name="ans25" id="25a" /> 3  </br>
+					<input type="radio" name="ans25" id="25b" /> 5  </br>
+					<input type="radio" name="ans25" id="25c" /> 7  </br>
+					<input type="radio" name="ans25" id="25d" /> 11  </br>
+				</div>
+				<div id="q26">
+					<h3>26) What value will x contain when the sample code below is executed?</h3>
+					<pre>
+						int x = 3; 
+						if( x == 2 );
+							x = 0; 
+						if( x == 3 )
+							x++; 
+						else 
+							x += 2;
+					</pre>
+					<input type="radio" name="ans26" id="26a" /> 1  </br>
+					<input type="radio" name="ans26" id="26b" /> 2  </br>
+					<input type="radio" name="ans26" id="26c" /> 3  </br>
+					<input type="radio" name="ans26" id="26d" /> 4  </br>
+				</div>
+				
+				<div id="q27">
+					<h3>27) What is the value of myArray[1][2]; in the sample code follows ?</h3>
+					<pre>
+						int i,j; 
+						int ctr = 0; 
+						int myArray[2][3]; 
+						for (i=0; i<3; i++) 
+							for (j=0; j<2; j++) 
+							{ 
+								myArray[j][i] = ctr; 
+								++ctr; 
+							}
+					</pre>
+					<input type="radio" name="ans27" id="27a" /> 2  </br>
+					<input type="radio" name="ans27" id="27b" /> 3  </br>
+					<input type="radio" name="ans27" id="27c" /> 4  </br>
+					<input type="radio" name="ans27" id="27d" /> 5  </br>
+				</div>
+				
+				<div id="q28">
+					<h3>28) Find the output of the code.</h3>
+					<pre>
+						main() 
+						{      
+							int e=- -2;           
+							printf("e=%d",e);
+						} 
+					</pre>
+					<input type="radio" name="ans28" id="28a" /> e=--2   </br>
+					<input type="radio" name="ans28" id="28b" /> e=-2   </br>
+					<input type="radio" name="ans28" id="28c" />  e=2   </br>
+					<input type="radio" name="ans28" id="28d" />  e=1   </br>
+				</div>
+				
+				<div id="q29">
+					<h3>29) Find the output of the code.</h3>
+					<pre>
+						main() 
+						{ 
+							printf("\nab");
+							printf("\bsi"); 
+							printf("\rtu"); 
+						} 
+					</pre>
+					<input type="radio" name="ans29" id="29a" /> absitu  </br>
+					<input type="radio" name="ans29" id="29b" /> tutui   </br>
+					<input type="radio" name="ans29" id="29c" /> abitu  </br>
+					<input type="radio" name="ans29" id="29d" /> tui  </br>
+				</div>
+				
+				<div id="q30">
+					<h3>30) Predict the Error or Output of the code.</h3>
+					<pre>
+						 main()
+						{
+							int i;
+							printf("%d",scanf("%d",&i));  // value 10 is given as input here 
+						}
+					</pre>
+					<input type="radio" name="ans30" id="30a" /> Compiler Error  </br>
+					<input type="radio" name="ans30" id="30b" /> Garbage Value  </br>
+					<input type="radio" name="ans30" id="30c" /> 1  </br>
+					<input type="radio" name="ans30" id="30d" /> 10  </br>
+				</div>	
+					<input type="submit" value="Submit" onclick="check();" id="Save">	
+			</form>	
+		</section>
+</body>
+</html>
